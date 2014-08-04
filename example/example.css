@@ -1,0 +1,14 @@
+.example-gradient{
+    background-image: -webkit-gradient(
+    	linear,
+    	left top,
+    	left bottom,
+    	color-stop(0, #FF0000),
+    	color-stop(1, #FF00FF)
+    );
+    background-image: -o-linear-gradient(bottom, #FF0000 0%, #FF00FF 100%);
+    background-image: -moz-linear-gradient(bottom, #FF0000 0%, #FF00FF 100%);
+    background-image: -webkit-linear-gradient(bottom, #FF0000 0%, #FF00FF 100%);
+    background-image: -ms-linear-gradient(bottom, #FF0000 0%, #FF00FF 100%);
+    background-image: linear-gradient(to bottom, #FF0000 0%, #FF00FF 100%);
+}

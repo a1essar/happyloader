@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 var del = require('del');
 
-var pluginName = 'happymodal';
+var pluginName = 'happyloader';
 
 var paths = {
   scripts: 'src/jquery.' + pluginName + '.js',
