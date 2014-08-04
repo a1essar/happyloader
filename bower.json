@@ -1,0 +1,32 @@
+{
+  "name": "happymodal",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [
+    "css",
+    "js",
+    "front-end" 
+  ],
+  "homepage": "https://github.com/a1essar/happymodal",
+  "main": [
+    "jquery.happymodal.js",
+    "jquery.happymodal.min.js",
+    "happymodal.min.css.map",
+    "jquery.happymodal.min.js.map"
+  ],
+  "ignore": [
+    "src",
+    "example",
+    "/.*",
+    "CNAME",
+    "CONTRIBUTING.md",
+    "docs",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": ">= 2.1.1"
+  }
+}
