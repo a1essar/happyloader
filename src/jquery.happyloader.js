@@ -34,8 +34,8 @@
         this.element = element;
         this.$element = $(this.element);
         this.$body = $('body');
-        this.urls = []
-        this.imageCounter = 0
+        this.urls = [];
+        this.imageCounter = 0;
 
         this.options = $.extend( {
         }, defaults, options, $(this.element).data('happyloader-options')) ;
@@ -44,9 +44,7 @@
         this._name = happyloader;
         
         this.version = VERSION;
-        this.show = this.show;
-        this.hide = this.hide;
-        
+
         this.init();
         this.bindMethods();
         this.bindEventListeners();
@@ -134,6 +132,10 @@
                 url = element.css('background-image'); 
                 
                 if(url.indexOf('gradient') + 1 > 0){
+                    return false;
+                }
+
+                if(url.indexOf('data') + 1 > 0){
                     return false;
                 }
                 
