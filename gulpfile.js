@@ -29,7 +29,7 @@ gulp.task('scripts', ['clean'], function() {
       .pipe(concat('jquery.' + pluginName + '.min.js'))
       .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('styles', ['clean'], function() {
@@ -39,7 +39,7 @@ gulp.task('styles', ['clean'], function() {
       .pipe(csso())
     .pipe(prefix("last 2 version", "ie 9", { cascade: true }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // Rerun the task when a file changes

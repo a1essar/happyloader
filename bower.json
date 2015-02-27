@@ -9,22 +9,17 @@
   ],
   "homepage": "https://github.com/a1essar/happyloader",
   "main": [
-    "jquery.happyloader.min.js",
-    "jquery.happyloader.min.js.map",
-    "happyloader.min.css",
-    "happyloader.min.css.map"
+    "src/jquery.happyloader.js",
+    "src/happyloader.css"
   ],
   "ignore": [
-    "src",
-    "example",
-    "/.*",
-    "CNAME",
-    "CONTRIBUTING.md",
-    "docs",
-    "bower.json",
-    "gulpfile.js",
+    "*.md",
+    ".gitignore",
+    ".csscomb.json",
     "package.json",
-    "README.md"
+    "gulpfile.js",
+    "node_modules",
+    "vendor"
   ],
   "dependencies": {
     "jquery": ">= 2.1.1"
