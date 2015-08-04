@@ -27,6 +27,7 @@
             happyloaderImages : 'happyloader-images',
             happyloaderInformer : 'happy-loader-informer',
             customRenderBar: false,
+            customRemoveLoader: false,
             debug : false,
             callback: function() {},
         };
@@ -37,6 +38,7 @@
         this.$body = $('body');
         this.urls = [];
         this.imageCounter = 0;
+        this.timer = Date.now();
 
         this.options = $.extend( {
         }, defaults, options, $(this.element).data('happyloader-options')) ;
@@ -79,6 +81,11 @@
         },
         
         removeLoader: function(){
+            if (typeof this.options.customRemoveLoader === 'function') {
+                this.options.customRemoveLoader(this);
+                return true;
+            }
+            
             $('.'+this.options.happyloaderBar).promise().done($.proxy(function() {
                 $('.'+this.options.happyloaderImages).remove();
                 $('.'+this.options.happyloaderOverlay).animate({'opacity' : 0}, 300, $.proxy(function(){
