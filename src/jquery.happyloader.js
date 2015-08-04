@@ -26,6 +26,7 @@
             happyloaderBar : 'happy-loader-bar',
             happyloaderImages : 'happyloader-images',
             happyloaderInformer : 'happy-loader-informer',
+            customRenderBar: false,
             debug : false,
             callback: function() {},
         };
@@ -64,6 +65,11 @@
         },
         
         renderBar: function(){
+            if (typeof this.options.customRenderBar === 'function') {
+                this.options.customRenderBar(this);
+                return true;
+            }
+            
             var percentage = parseInt(this.imageCounter*100/this.urls.length);
             var windowWidth = $(window).width();
             var width = parseInt((percentage * windowWidth)/100);
